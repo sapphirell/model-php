@@ -26,7 +26,12 @@ while ($task = $redisClass->redis->rPop('queueMaster'))
     while ($work = $redisClass->redis->rPop($taskDetail[0]))
     {
         $instance->main($work);
-        sleep($taskDetail[1]);
+        //队列延迟
+        if ($taskDetail[1])
+        {
+            sleep($taskDetail[1]);
+        }
+
     }
 
 }

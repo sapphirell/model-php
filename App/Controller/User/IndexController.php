@@ -15,22 +15,23 @@ class IndexController extends Base {
     public $upload;
     public $redis;
     public $queue;
-    public function __construct(RequestClass $requestClass,ModelClass $modelClass,UploadClass $upload,RedisClass $redisClass,Queue $queue)//App\Model\ModelClass $modelClass
+    public function __construct
+    (
+        RequestClass $requestClass,
+        ModelClass $modelClass,
+        UploadClass $upload,
+        RedisClass $redisClass,
+        Queue $queue)//App\Model\ModelClass $modelClass
     {
-//          $requestClass->getPathInfo();
-//        var_dump($r);
-//        new PDOClass();
         $this->model = $modelClass;
         $this->upload = $upload;
         $this->redisClass = $redisClass;
         $this->queue = $queue;
     }
-    public function tester(){
-//        var_dump($this->model);
+    public function tester()
+    {
         $res = $this->model->table('user')->select("*")->where(['id'=>'1'])->getAll();
 
-        var_dump($res);
-        echo "200 OK";
         echo "<form action='/upload_file' method=\"post\"enctype=\"multipart/form-data\">
 
                 <label for=\"file\">Filename:</label>
@@ -41,7 +42,7 @@ class IndexController extends Base {
             ";
 //        $this->redisClass->redis->set('1','2');
 //        var_dump($this->redisClass->redis->get(1));
-        $this->queue->task('mission1')->delay(1)->values(2222)->values(232323)->makeTask();
+        $this->queue->task('mission1')->delay(1)->values(2222)->values(232323)->values(23123123333555)->makeTask();
 
 
     }
