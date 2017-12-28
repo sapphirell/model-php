@@ -21,4 +21,9 @@ class RedisClass extends Base
     {
         $this->redis->connect($config['cache_server'], $config['cache_port']);
     }
+    public function cache()
+    {
+        //为了避免失效,第一个查询的请求会去生成缩并查询
+        
+    }
 }
