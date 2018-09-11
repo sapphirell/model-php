@@ -1,6 +1,6 @@
 <?php
 namespace App;
-class config extends Base{
+class Config extends Base{
 
     static function returnConfig()
     {

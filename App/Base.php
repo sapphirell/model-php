@@ -9,6 +9,6 @@ class Base {
     public function __construct()
     {
         error_reporting(E_ERROR);
-        $this->config = config::returnConfig();
+        $this->config = Config::returnConfig();
     }
 }

@@ -2,14 +2,13 @@
 namespace App\Server;
 
 use App\Base;
-use App\config;
-use App\Controller\User\UserTestController;
-use App\route;
+use App\Config;
+
 
 class DBClass extends Base{
     public $conf;
     public $pdo;
-    public function __construct(config $config)
+    public function __construct(Config $config)
     {
         parent::__construct();
         $this->conf = $config::returnConfig();

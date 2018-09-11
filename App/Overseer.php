@@ -11,7 +11,7 @@ use App\Server;
 
 
 $redis = new \Redis();
-$config = new config();
+$config = new Config();
 $redisClass = new Server\RedisClass($config,$redis);
 
 

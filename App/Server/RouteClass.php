@@ -2,7 +2,7 @@
 namespace App\Server;
 
 use App\Base;
-use App\route;
+
 use App\Container;
 
 class RouteClass extends Base{

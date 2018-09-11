@@ -3,7 +3,7 @@ namespace App;
 
 use App\Server\RouteClass;
 
-class route {
+class Route {
 
     public $serverRoute;
     public $config;
